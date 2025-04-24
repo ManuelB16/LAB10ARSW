@@ -1,5 +1,5 @@
 ### Escuela Colombiana de Ingeniería
-### Paula Natalia Paez Vega
+### Paula Natalia Paez Vega Y Manuel Felipe Barrera Barrera
 ### Arquitecturas de Software - ARSW
 
 ## Escalamiento en Azure con Maquinas Virtuales, Sacale Sets y Service Plans

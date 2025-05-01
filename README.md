@@ -23,7 +23,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ![](images/part3/part3-function-configii.png)
 
-#Se realizo#
+*Se realizo*
 
 Se crea un Function App:
 
@@ -43,7 +43,7 @@ Se crea un Function App:
 
 ![](images/part3/part3-test-function.png)
 
-#Lo realizado:#
+*Lo realizado:*
 
 Se prueba en azure
 
@@ -73,15 +73,47 @@ function fiboMemo(n, M) {
     return M[n];
 }
 ```
+Se realizan pruebas con los numerso 1000, 10000 y 50000
 
+1000
+
+![image](https://github.com/user-attachments/assets/7eb550b0-a9f5-46dc-8b97-dfc5dc12e149)
+
+10000
+
+![image](https://github.com/user-attachments/assets/36fd26f7-0f0a-444e-825c-50706c93a076)
+
+50000
+
+![image](https://github.com/user-attachments/assets/b4ac54c9-b5db-4e5f-9dc5-ef81cc52b09a)
+
+*Se revisan las metricas:*
+
+![image](https://github.com/user-attachments/assets/59f9df46-83f6-4de3-bab9-2e7651874acd)
+
+*Con los valores muy grandes:*
+
+![image](https://github.com/user-attachments/assets/9cec082f-6043-4f82-8efd-e1900c1b0f23)
+
+*Las respuestas de la función son más rápidas y el consumo de memoria es menor.*
 
 **Preguntas**
 
 * ¿Qué es un Azure Function?
+*Azure Functions es un servicio en la nube disponible a petición que proporciona toda la infraestructura y los recursos, que se actualizan continuamente, necesarios para ejecutar las aplicaciones. Céntrese en el código que más le importa, en el lenguaje más productivo, y Functions se encargará del resto. Functions proporciona proceso sin servidor para Azure. Functions también se puede usar para crear API web, responder a los cambios en las bases de datos, procesar secuencias de IoT, administrar colas de mensajes, etc.
+Azure Functions es una solución sin servidor que le permite escribir menos código, mantener menos infraestructura y ahorrar costos. En lugar de preocuparse por implementar y mantener servidores, la infraestructura en la nube proporciona todos los recursos actualizados necesarios para mantener las aplicaciones en ejecución.*
 * ¿Qué es serverless?
+*La computación sin servidor (o serverless para abreviar) es un modelo de ejecución en el que el proveedor en la nube (AWS, Azure o Google Cloud) es responsable de ejecutar un fragmento de código mediante la asignación dinámica de los recursos.*
 * ¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?
+*El runtime de Azure Functions es el componente que ejecuta el código. Cuando se crea una Function App, seleccionar el runtime determina el lenguaje de programación que se puede usar y las versiones de dicho lenguaje que son compatibles.
+Por ejemplo, si se elige el runtime de .NET, se podrá escribir funciones en C#, mientras que si se elige el runtime de Node.js, se podrá usar JavaScript.
+Además, la versión del runtime que se elija puede afectar a las características y a la compatibilidad con ciertas bibliotecas y frameworks.*
 * ¿Por qué es necesario crear un Storage Account de la mano de un Function App?
+*Es necesario para el almacenamiento de archivos de la aplicación, los disparadores y enlaces, el escalado y durabilidad y los registros de ejecuciones de funciones*
 * ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.
+*Plan Consumo: Cuando se usa el plan de consumo, las instancias del host de Azure Functions se agregan y quitan de forma dinámica según el número de eventos entrantes. El plan de consumo es la opción de hospedaje completamente sin servidor de Azure Functions.
+Plan Elastic Premium: Functions es una opción de hospedaje de escalado dinámico para las aplicaciones de funciones.*
 * ¿Por qué la memoization falla o no funciona de forma correcta?
+*El llamado recursivo puede ocasionar un desbordamiento de pila, y al inicio no se tienen valores en memoria por lo que es necesario calcularlos.*
 * ¿Cómo funciona el sistema de facturación de las Function App?
-* Informe
+*Se factura por el tiempo de ejecución de la función, el consumo de memoria y el número de ejecuciones. El plan de consumo de Azure Functions se factura en función del consumo de recursos y las ejecuciones por segundo.*

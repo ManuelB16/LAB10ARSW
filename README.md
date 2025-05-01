@@ -59,7 +59,8 @@ Se modifica la colección de POSTMAN con NEWMAN de tal forma que pueda enviar 10
 
 6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
 
-'''
+
+```javascript
 function fiboM(n, M) {
     return n <= 1 ? bigInt(n) : fiboMemo(n - 1, M).add(fiboMemo(n - 2, M));
 }
@@ -71,7 +72,8 @@ function fiboMemo(n, M) {
     M[n] = fiboM(n, M);
     return M[n];
 }
-'''
+```
+
 
 **Preguntas**
 
